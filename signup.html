@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тіркелу</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <button class="close-btn">×</button>
+            <h1>Тіркелу</h1>
+            <p>Уақытыңды тиімді пайдаланып, үздік кеңестер мен ұсыныстар ал</p>
+            <form>
+                <label for="fullname">ФИО</label>
+                <input type="text" id="fullname" placeholder="Толық аты-жөніңізді енгізіңіз" required>
+
+                <label for="email">Пошта</label>
+                <input type="email" id="email" placeholder="name@email.com" required>
+
+                <label for="password">Құпия сөз</label>
+                <input type="password" id="password" placeholder="Құпия сөзді құрастырыңыз" minlength="8" maxlength="72" required>
+                <p class="password-note">8 және 72 таңба арасында</p>
+
+                <label for="role">Білім Қазынасына ... ретінде тіркеліңіз</label>
+                <select id="role" required>
+                    <option value="" disabled selected>Таңдаңыз</option>
+                    <option value="teacher">Оқытушы</option>
+                    <option value="student">Студент</option>
+                </select>                
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">«Тегін қосылу» түймесін басу арқылы мен Coursera-ны қабылдаймын. 
+                        <a href="#">Terms of Use</a> and <a href="#">Privacy Notice</a>
+                    </label>
+                </div>                
+
+                <button type="submit" class="primary-btn">Тіркелу</button>
+            </form>
+            <p class="footer-note">Білім қазынасын пайдаландыңыз ба? <a href="login.html">Жүйеге кіріңіз</a></p>
+        </div>
+    </div>
+</body>
+<script src="signup.js"></script>
+</html>

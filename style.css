@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    position: fixed; /* Закрепление элемента */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex; /* Flexbox для расположения логотипа и списка */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Пространство между логотипом и меню */
+    gap: 20px;
+}
+
+header nav a img {
+    height: 80px; 
+    margin-right: 700px; 
+}
+
+header nav ul {
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 50px;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-icon {
+    font-size: 15px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 7px;
+}
+
+
+/* Абай атамыздың сөздері*/
+#motivation {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Светлый фон для контраста */
+    color: #333;
+    height: 60vh;
+    margin-top: 50px;
+}
+
+#motivation p {
+    font-size: 2.5rem;
+    margin: 90px 80px 80px 80px;
+}
+
+/* Советы */
+main {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    height: 70vb;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./IS22_3A.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px); /* Блюр заднего фона */
+    z-index: 0;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Текст должен быть над блюром */
+}
+
+main .courses {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1; /* Курсы должны быть над блюром */
+}
+
+main .courses .course-box {
+    width: 250px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0); /* Прозрачный фон */
+    border: 2px solid rgb(255, 255, 255); /* Белая обводка */
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+main .courses .course-box:hover {
+    transform: scale(1.05);
+}
+
+/* Новости */
+#section {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+  
+#section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+    /* Стили для контейнера Swiper */
+.swiper-container {
+    width: 80%;
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+}
+  
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+  
+    /* Стили для карточек новостей */
+.news-card {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 100%; /* Сделаем ширину карточек адаптивной */
+}
+  
+.news-card img {
+    width: 70%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+  
+.news-card p {
+    font-size: 1em;
+    color: #555;
+}
+  
+.news-card:hover {
+    border: 1px solid black;
+    transform: translateY(-5px);
+}
+  
+    /* Стиль для навигационных кнопок */
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+  
+.swiper-button-next {
+    right: 10px;
+}
+  
+.swiper-button-prev {
+    left: 10px;
+}
+  
+/* Вопросы */
+#questions {
+    display: flex;
+    justify-content: center; /* Центрируем секцию */
+    align-items: center; /* Центрируем элементы по вертикали */
+    gap: 50px; /* Уменьшаем пространство между контейнерами */
+    padding: 50px;
+    background-color: #f9f9f9;
+    height: 50vb;
+}
+
+#questions h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+    /* Стили для формы */
+#questions .form-container {
+    width: 35%;
+    text-align: center;
+}
+
+#questions .form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#questions .form-container form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+#questions .form-container form button {
+    padding: 10px 15px;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 40%;
+}
+
+#questions .form-container form button:hover {
+    background-color: darkred;
+}
+    /* Стили для текстового контейнера */
+#questions .text-container {
+    width: 40%; /* Увеличиваем ширину */
+    text-align: center; /* Центрируем текст */
+}
+
+#questions .text-container h2 {
+    margin-bottom: 10px;
+}
+
+#questions .text-container p {
+    font-size: 20px; /* Уменьшаем шрифт для лучшей читабельности */
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Преимущества */
+.benefits-section {
+    background: linear-gradient(135deg, #f8fafc, #e7edf3);
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.benefits-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /* color: #005f99; */
+    font-weight: bold;
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.benefit {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.benefit:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.benefit i.icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #005f99;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.benefit:hover i.icon {
+    color: #007acc;
+    transform: rotate(20deg);
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+.benefit p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+/* О нас */
+#footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+  
+#footer .footer-about {
+    margin-bottom: 20px;
+}
+  
+#footer .footer-about h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 0 0 20px;
+}
+  
+#footer .footer-about p {
+    font-size: 14px;
+    margin: 0;
+}
+  
+#footer .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+  
+#footer .footer-social a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+#footer .footer-social a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+  
+#footer .footer-contact {
+    font-size: 14px;
+    line-height: 1.5;
+}
+  
+/* Адаптивность для мобильных телефонов */
+@media (max-width: 480px) {
+    /* Шапка */
+    header {
+        position: static;
+    }
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav a img {
+        height: 50px; /* Уменьшаем размер логотипа */
+        margin-right: 0; /* Убираем отступ справа */
+    }
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 15px; /* Увеличиваем отступ между ссылками */
+    }
+
+    /* Секция мотивации */
+    #motivation p {
+        font-size: 1.5rem; /* Уменьшаем размер шрифта */
+        margin: 10px 20px;
+    }
+
+    /* Главная секция */
+    main {
+        height: 40vb;
+    }
+    main h1 {
+        font-size: 2rem; /* Уменьшаем размер заголовка */
+    }
+    main .courses {
+        flex-direction: column;
+        gap: 20px;
+    }
+    main .courses .course-box {
+        width: 100%; /* Делаем карточки курса на весь экран */
+        height: auto; /* Автоматическая высота */
+    }
+
+    /* Новости */
+    #section h2 {
+        font-size: 2rem;
+    }
+    .swiper-container {
+        width: 100%;
+    }
+    .news-card img {
+        width: 100%; /* Делать изображения карточек на весь экран */
+        height: auto;
+    }
+    .news-card p {
+        font-size: 10px;
+    }    
+
+    /* Вопросы */
+    #questions {
+        flex-direction: column;
+        align-items: center;
+    }
+    #questions .form-container,
+    #questions .text-container {
+        width: 90%; /* Увеличиваем ширину контейнеров */
+    }
+    #questions h2 {
+        font-size: 15px;
+    }
+    #questions .form-container form input,
+    #questions .form-container form button {
+        width: 100%; /* Кнопки и поля ввода на весь экран */
+    }
+
+    /* Преимущества */
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .benefit {
+        width: 100%; /* Делаем карточки преимуществ на весь экран */
+        max-width: none;
+        margin-bottom: 20px; /* Увеличиваем отступ между карточками */
+    }
+
+    /* О нас */
+    #footer .footer-about h3 {
+        font-size: 30px; /* Уменьшаем размер заголовка в футере */
+    }
+    #footer .footer-social a {
+        font-size: 18px; /* Уменьшаем размер иконок в футере */
+    }
+}

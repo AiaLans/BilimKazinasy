@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="course.css">
+    <title>2-ші курс</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="https://img.freepik.com/premium-vector/learning-minimalist-line-art-icon-logo-symbol_925376-269447.jpg?w=996" alt="Лого" id="logo">
+            </a>
+            <ul>
+                <li><a href="#main">Қосымшалар</a></li>
+                <li><a href="#section">Кеңестер</a></li>
+                <li><a href="#footer">Байланыс</a></li>
+                <!-- <li><a href="login.html">Кіру</a></li>
+                <li><a href="signup.html">Тіркелу</a></li> -->
+                <li><a href="#" onclick="logout()">Шығу</a></li>
+                <li id="profile-container">
+                    <!-- Иконка профиля и ФИО пользователя появятся здесь после входа -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Доп.курсы -->
+    <main id="main">
+        <div class="left-section">
+            <p>2nd course</p>
+        </div>
+        <div class="right-section">
+            <h1>2-ші курс:</h1>
+            <section id="courses">
+                <!-- Первый курс -->
+                <div class="course">
+                    <div class="text">
+                        <h2>Веб-бағдарламалау</h2>
+                        <p>
+                            Веб-бағдарламалау, компьютерлік ойындар, графикалық дизайн, моушн дизайн, робототехника, инженерлік графика, желілік құрылғыларды басқару
+                        </p>
+                        <img src="https://studionomad.kz/public/images/picture/blog/5507-web%20(1).jpg" alt="Веб-бағдарламалау">
+                        <p class="phone"><strong>Телефон:</strong> +7 707 297 4534</p>
+                    </div>
+                </div>
+                <!-- Второй курс -->
+                <div class="course">
+                    <div class="text">
+                        <h2>Түрік тілі</h2>
+                        <p>
+                            Сіздерді Түркиядан келген мұғалім өткізетін тегін түрік тілі курсына шақырамыз!
+                        </p>
+                        <img src="https://cdn-kz.kursiv.media/wp-content/uploads/2023/06/11-6-1-1024x576.jpg" alt="Түрік тілі">
+                        <p class="phone"><strong>Телефон:</strong> 8 771 420 9017</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Советы -->
+    <!-- <section id="section">
+        <h1>Кеңестер:</h1>
+        <div class="advice-list" id="advice-list">
+        </div>
+        <div class="pagination">
+            <button id="prev-page" onclick="changePage(-1)">Предыдущая</button>
+            <button id="next-page" onclick="changePage(1)">Следующая</button>
+        </div>
+    </section> -->
+    <section id="section">
+        <h1>Кеңестер:</h1>
+        <div class="advice-list">
+
+            <div class="advice-item">
+                <img src="https://via.placeholder.com/60" alt="Аватар">
+                <div class="advice-content">
+                    <h2 class="nickname">Aigerim_Kanatqyzy</h2>
+                    <p class="advice-text">Начинайте осваивать тайм-менеджмент и планирование. Занятия становятся сложнее, и умение распределять время поможет избежать лишнего стресса.</p>
+                </div>
+            </div>
+
+            <div class="advice-item">
+                <img src="https://via.placeholder.com/60" alt="Аватар">
+                <div class="advice-content">
+                    <h2 class="nickname">BlinkVerse</h2>
+                    <p class="advice-text">Get involved in internships or small projects if possible. Practical experience can give you an edge and helps solidify what you’ve learned.</p>
+                </div>
+            </div>
+
+            <div class="advice-item">
+                <img src="https://via.placeholder.com/60" alt="Аватар">
+                <div class="advice-content">
+                    <h2 class="nickname">Ruslan_Vladislav</h2>
+                    <p class="advice-text">Өзіңе ұнайтын пәнді тереңірек оқып, қосымша ақпарат ізде. Бұл болашақта таңдаған мамандығыңа бағыт береді.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Добавить совет -->
+    <section class="signup-section">
+        <div class="signup-info">
+            <h2>КЕҢЕСПЕН БӨЛІСУ</h2>
+            <p>Жинақтаған лайфхактарыңыз бен тиімді шешімдеріңізді бөлісіп, өзгелердің күнделікті өмірін жеңілдетуге, жаңа көзқарастар қалыптастыруға және проблемаларды оңай шешуге көмектесіңіз. Сіздің бөліскен әрбір идеяңыз басқаларға үлкен қолдау мен шабыт бола алады</p>
+        </div>
+        <div class="signup-form">
+            <h2>Кеңес қалдыру</h2>
+            <form id="advice-form">
+                <input type="text" id="nickname" placeholder="ФИО-ңызды енгізіңіз" required>
+                <input type="text" id="advice-text" placeholder="Кеңес" required>
+                <button type="submit">Жіберу</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <footer id="footer"> <!-- class -->
+        <div class="footer-about">
+          <h3>Сайт туралы</h3>
+          <p>© Coursera Inc., 2024 Все права защищены.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">TikTok</a>
+        </div>
+        <div class="footer-contact">
+          <p>Қазақстан, Алматы қ., 8-ші шағын ауданы, 86</p>
+          <p>Тел.: 586 95 25 | 8 778 512 66 45</p>
+          <p>Пошта: bilimkazina02@gmail.com</p>
+        </div>
+    </footer>
+    <script src="course.js"></script>
+</body>
+</html>

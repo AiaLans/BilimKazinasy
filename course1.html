@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="course.css">
+    <title>1-ші курс</title>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="https://img.freepik.com/premium-vector/learning-minimalist-line-art-icon-logo-symbol_925376-269447.jpg?w=996" alt="Лого" id="logo">
+            </a>
+            <ul>
+                <li><a href="#main">Қосымшалар</a></li>
+                <li><a href="#section">Кеңестер</a></li>
+                <li><a href="#footer">Байланыс</a></li>
+                <!-- <li><a href="login.html">Кіру</a></li>
+                <li><a href="signup.html">Тіркелу</a></li> -->
+                <li><a href="#" onclick="logout()">Шығу</a></li>
+                <li id="profile-container">
+                    <!-- Иконка профиля и ФИО пользователя появятся здесь после входа -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Доп.курсы -->
+    <main id="main">
+        <div class="left-section">
+            <p>1st course</p>
+        </div>
+        <div class="right-section">
+            <h1>1-ші курс:</h1>
+            <section id="courses">
+                <!-- Первый курс -->
+                <div class="course">
+                    <div class="text">
+                        <h2>Робототехника</h2>
+                        <p>
+                            Курс по робототехнике предназначен для детей и подростков, увлеченных технологиями и инженерией.
+                            Участники будут работать с современными робототехническими платформами LEGO EV3, роботами FTC и наборами Studica.
+                        </p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8huQIo9Ux49Azr2uRxoMDY-kbH1JUdbU3w&s" alt="Робототехника">
+                        <p class="phone"><strong>Телефон:</strong> 8 707 297 4534</p>
+                    </div>
+                </div>
+                <!-- Второй курс -->
+                <div class="course">
+                    <div class="text">
+                        <h2>Графический дизайн и моушн дизайн</h2>
+                        <p>
+                            Cурет салуға және анимация саласына қызығатын студенттеррге арналған курс.
+                            Курс кəтірушілер Adobe Illustrator, Adobe Photoshop, Blender және басқа бағдарламаларда
+                            векторлық суреттер, иллюстрациялармен жұмыс жасауды үйренеді.
+                        </p>
+                        <img src="https://i.ytimg.com/vi/b7ZC01afWPw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB0sPh_Y9cWM8xG45LBmiwiLy8Erw" alt="Дизайн">
+                        <p class="phone"><strong>Телефон:</strong> 8 707 297 4534</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Советы -->
+    <section id="section">
+        <h1>Кеңестер:</h1>
+        <div class="advice-list" id="advice-list">
+            <!-- Здесь будут динамически добавляться советы -->
+        </div>
+        <div class="pagination">
+            <button id="prev-page" onclick="changePage(-1)">Предыдущая</button>
+            <button id="next-page" onclick="changePage(1)">Следующая</button>
+        </div>
+    </section>
+
+    <!-- Добавить совет -->
+    <section class="signup-section">
+        <div class="signup-info">
+            <h2>КЕҢЕСПЕН БӨЛІСУ</h2>
+            <p>Жинақтаған лайфхактарыңыз бен тиімді шешімдеріңізді бөлісіп, өзгелердің күнделікті өмірін жеңілдетуге, жаңа көзқарастар қалыптастыруға және проблемаларды оңай шешуге көмектесіңіз. Сіздің бөліскен әрбір идеяңыз басқаларға үлкен қолдау мен шабыт бола алады</p>
+        </div>
+        <div class="signup-form">
+            <h2>Кеңес қалдыру</h2>
+            <form id="advice-form" onsubmit="handleSubmit(event)">
+                <input type="text" id="nickname" placeholder="ФИО-ңызды енгізіңіз" required>
+                <input type="text" id="advice-text" placeholder="Кеңес" required>
+                <button type="submit">Жіберу</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <footer id="footer"> 
+        <div class="footer-about">
+            <h3>Сайт туралы</h3>
+            <p>© Coursera Inc., 2024 Все права защищены.</p>
+        </div>
+        <div class="footer-social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+            <a href="#">TikTok</a>
+        </div>
+        <div class="footer-contact">
+            <p>Қазақстан, Алматы қ., 8-ші шағын ауданы, 86</p>
+            <p>Тел.: 586 95 25 | 8 778 512 66 45</p>
+            <p>Пошта: bilimkazina02@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+</html>

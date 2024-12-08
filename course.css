@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    position: fixed; /* Закрепление элемента */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* height: 30px; */
+}
+
+header nav {
+    display: flex; /* Flexbox для расположения логотипа и списка */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Пространство между логотипом и меню */
+    gap: 20px;
+}
+
+header nav a img {
+    height: 80px; 
+    margin-right: 700px; 
+}
+
+header nav ul {
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 50px;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profile-icon {
+    font-size: 15px;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 7px;
+}
+
+/* Доп.курсы */
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+    height: 70vh;
+    margin-top: 10vb;
+}
+    /* Левая секция */
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.left-section p {
+    font-size: 60px;
+    font-weight: bold;
+    color: #333;
+    margin: 100px;
+}
+    /* Правая секция */
+.right-section {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Центрирование текста */
+}
+    /* Курсы */
+#courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%; /* Занимает всю ширину */
+    justify-content: center; /* Центрирование блоков с курсами */
+}
+
+.course {
+    flex: 1 1 45%; /* Увеличена ширина блока */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.course p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    text-align: center;
+}
+
+.course img {
+    width: 100%; /* Изображение растягивается по ширине контейнера */
+    height: 250px; /* Фиксированная высота для одинакового размера */
+    object-fit: cover; /* Обрезает изображение, чтобы заполнить заданную область */
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course .phone {
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    margin-top: 30px;
+}
+
+/* Советы */
+    /* Секция советов */
+#section {
+    padding: 20px;
+    max-width: 150vh;
+    margin: 0 auto;
+    height: 65vh;
+}
+
+#section h1 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+    /* Список советов */
+.advice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+    /* Элемент совета */
+.advice-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+    /* Аватар */
+.advice-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    /* Содержимое совета */
+.advice-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+    /* Никнейм */
+.advice-content .nickname {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 0;
+}
+    /* Текст совета */
+.advice-content .advice-text {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    line-height: 1.5;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+}
+
+
+/* Добавить совет */
+.signup-section {
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    margin: 250px auto 150px auto;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+    /* Стили для информационного блока */
+.signup-info {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.signup-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.signup-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+    /* Стили для формы */
+.signup-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.signup-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 20px;
+}
+
+.signup-info h2 {
+    font-size: 30px;
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-form form button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form form button:hover {
+    background-color: #003f8a;
+}
+
+.signup-form p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.signup-form p a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Удалить совет */
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* О нас */
+#footer {
+    background-color: #000;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+  
+#footer .footer-about {
+    margin-bottom: 20px;
+}
+  
+#footer .footer-about h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin: 0 0 20px;
+}
+  
+#footer .footer-about p {
+    font-size: 14px;
+    margin: 0;
+}
+  
+#footer .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+  
+#footer .footer-social a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+#footer .footer-social a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+  
+#footer .footer-contact {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.teacher-advice {
+    background-color: #d4e7fd; /* Светло-синий цвет для преподавателей */
+    border-left: 4px solid #7ec9ff; /* Синий бордер */
+}

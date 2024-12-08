@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Білім қазынасы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="https://img.freepik.com/premium-vector/learning-minimalist-line-art-icon-logo-symbol_925376-269447.jpg?w=996" alt="Лого" id="logo">
+            </a>
+            <ul>
+                <li><a href="#main">Кеңестер</a></li>
+                <li><a href="#section">Жаңалықтар</a></li>
+                <li><a href="#questions">Сұрақтар</a></li>
+                <li><a href="#footer">Байланыс</a></li>
+                <!-- <li><a href="login.html">Кіру</a></li>
+                <li><a href="signup.html">Тіркелу</a></li> -->
+                <li><a href="#" onclick="logout()">Шығу</a></li>
+                <li id="profile-container">
+                    <!-- Иконка профиля и ФИО пользователя появятся здесь после входа -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Абай атамыздың сөздері -->
+    <div id="motivation">
+        <p>Қиындықтар кездескенде, Абай атамыздың «Ғылымды махаббатпен көксерлік дәрежеге жеткіз» деген сөзін есіңе ал.</p>
+        <p>Шын ынтамен, беріліп оқыған білім ғана сені биікке жетелейді. Сенің бойыңда үлкен күш, табандылық және мақсатқа жетуге деген жігер бар.</p>
+    </div>
+
+    <!-- Главный контент -->
+    <main id="main">
+        <h1>Курс</h1>
+        <div class="courses">
+            <a href="course1.html" class="course-box">1 курс</a>
+            <a href="course2.html" class="course-box">2 курс</a>
+            <a href="course3.html" class="course-box">3 курс</a>
+            <a href="course4.html" class="course-box">4 курс</a>
+        </div>
+    </main>
+
+    <!-- Новости -->
+    <section id="section">
+        <h2>Жаңалықтар</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Элементы карусели -->
+                <div class="swiper-slide news-card">
+                    <img src="https://i.ibb.co/BcPjXQr/Whats-App-2024-09-17-09-52-46-f1494bf0.jpg" alt="news image">
+                    <p>Терроризм мен діни экстремизмге қарсы жиын өтті? Жиынға оқытушылар мен студентт...</p>
+                </div>
+                <div class="swiper-slide news-card">
+                    <img src="https://i.ibb.co/xsLnLrg/markup-1000054965.jpg" alt="news image">
+                    <p>Бүгін, 9 қыркүйек - Тоғызқұмалақ күні, "ALMATY POLYCTECHNIC COLLEGE" студенттері Елордамыз ..</p>
+                </div>
+                <div class="swiper-slide news-card">
+                    <img src="https://i.ibb.co/v4xsNk8/image.png" alt="news image">
+                    <p>«Адалдық сағаты» атты бірыңғай кураторлық сағат өтті 10.09.2024 ж. күні колледжде «А...</p>
+                </div>
+                <div class="swiper-slide news-card">
+                    <img src="https://i.ibb.co/2shf02T/Whats-App-2024-09-18-09-39-48-967c8bf5.jpg" alt="news image">
+                    <p>17.09.2024 күні Almaty Polytechnic College әкімшілігі Цифрландыру жүйесінің бұлттық технологиялар ...</p>
+                </div>
+                <div class="swiper-slide news-card">
+                    <img src="https://i.ibb.co/BcPjXQr/Whats-App-2024-09-17-09-52-46-f1494bf0.jpg" alt="news image">
+                    <p>Бүгін, 2024 жылғы 13 қыркүйекте, студенттер мен әлеуметтік серіктестердің қатысуымен...</p>
+                </div>
+                <div class="swiper-slide news-card">
+                    <img src="https://i.ibb.co/v4xsNk8/image.png" alt="news image">
+                    <p>«Адалдық сағаты» атты бірыңғай кураторлық сағат өтті 10.09.2024 ж. күні колледжде «А...</p>
+                </div>
+            </div>
+            <!-- Навигация -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <!-- Вопросы -->
+    <section id="questions">
+        <!-- Форма -->
+        <div class="form-container">
+            <h2>Сұрақ</h2>
+            <form id="question-form" onsubmit="redirectToGmail(event)">
+                <input type="email" id="email" name="email" placeholder="name@email.com" required>
+                <input type="text" id="question" name="question" placeholder="Сұрағыңызды жазыңыз" required>
+                <button type="submit">Жіберу</button>
+            </form>
+        </div>
+        <div class="text-container" id="response-container">
+            <h2>Сұрақтар</h2>
+            <p>Өзіңізді қызықтырған және жауабын білмей жүрген сұрақтарыңызды осында қалдырыңыз.</p>
+        </div>
+    </section>
+
+
+     <!-- Преимущества -->
+    <section class="benefits-section">
+        <h2>Платформаның артықшылықтары</h2>
+        <div class="benefits-container">
+            <div class="benefit" onmouseover="highlightBenefit(this)" onmouseout="resetBenefit(this)">
+                <i class="icon">💡</i>
+                <h3>Ақылды кеңестер</h3>
+                <p>Студенттерден алынған шынайы тәжірибе негізінде пайдалы кеңестер алыңыз.</p>
+            </div>
+            <div class="benefit" onmouseover="highlightBenefit(this)" onmouseout="resetBenefit(this)">
+                <i class="icon">🌐</i>
+                <h3>Қоғамдастық байланысы</h3>
+                <p>Платформада әртүрлі сұрақтарға жауап беретін белсенді қауымдастық бар.</p>
+            </div>
+            <div class="benefit" onmouseover="highlightBenefit(this)" onmouseout="resetBenefit(this)">
+                <i class="icon">✍️</i>
+                <h3>Өз кеңесіңізді бөлісіңіз</h3>
+                <p>Өзіңізге таныс қиындықтарды жеңуге көмектесетін кеңестерді бөлісіңіз.</p>
+            </div>
+            <div class="benefit" onmouseover="highlightBenefit(this)" onmouseout="resetBenefit(this)">
+                <i class="icon">📖</i>
+                <h3>Білімнің ортақ қазынасы</h3>
+                <p>Көптеген студенттердің білімдері мен тәжірибелеріне сүйене отырып дамыңыз.</p>
+            </div>
+        </div>
+    </section>
+       
+    
+
+    <!-- О нас -->
+    <footer id="footer"> <!-- class -->
+        <div class="footer-about">
+          <h3>Сайт туралы</h3>
+          <p>© Coursera Inc., 2024 Все права защищены.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">TikTok</a>
+        </div>
+        <div class="footer-contact">
+          <p>Қазақстан, Алматы қ., 8-ші шағын ауданы, 86</p>
+          <p>Тел.: 586 95 25 | 8 778 512 66 45</p>
+          <p>Пошта: bilimkazina02@gmail.com</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> <!-- Подключение Swiper.js -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    padding: 20px;
+    position: relative;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.password-note {
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+    margin-top: -10px;
+    margin-bottom: 15px;
+}
+
+.checkbox-container {
+    text-align: left;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.checkbox-container label a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.primary-btn:hover {
+    background-color: #005bb5;
+}
+
+.footer-note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.footer-note a {
+    color: #0073e6;
+    text-decoration: none;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="course.css">
+    <title>3-ші курс</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="https://img.freepik.com/premium-vector/learning-minimalist-line-art-icon-logo-symbol_925376-269447.jpg?w=996" alt="Лого" id="logo">
+            </a>
+            <ul>
+                <li><a href="#main">Қосымшалар</a></li>
+                <li><a href="#section">Кеңестер</a></li>
+                <li><a href="#footer">Байланыс</a></li>
+                <!-- <li><a href="login.html">Кіру</a></li>
+                <li><a href="signup.html">Тіркелу</a></li> -->
+                <li><a href="#" onclick="logout()">Шығу</a></li>
+                <li id="profile-container">
+                    <!-- Иконка профиля и ФИО пользователя появятся здесь после входа -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Доп.курсы -->
+    <main id="main">
+        <div class="left-section">
+            <p>3rd course</p>
+        </div>
+        <div class="right-section">
+            <h1>3-ші курс:</h1>
+            <section id="courses">
+                <!-- Первый курс -->
+                <div class="course">
+                    <div class="text">
+                        <h2>Жасанды интелект</h2>
+                        <p>
+                            Научитесь понимать технологии ИИ, Машинное обучение и Нейронные Сети, а также основы Программирования на Python
+                        </p>
+                        <img src="https://www.comnews.ru/sites/default/files2019/styles/large/public/articles/2023-09/%D0%A2%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8-%D0%B8%D1%81%D0%BA%D1%83%D1%81%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B01.jpg?itok=bJ1_-0RT" alt="ИИ">
+                        <p class="phone"><strong>Телефон:</strong> +7 707 297 4534 </p>
+                    </div>
+                </div>
+                <!-- Второй курс -->
+                <div class="course">
+                    <div class="text">
+                        <h2>Бағдарлама жасау</h2>
+                        <p>
+                            Вы научитесь разрабатывать программы, разбираться в Collections Framework, работать с многопоточностью и тестировать свои программы с помощью JUnit. 
+                        </p>
+                        <img src="https://i.pinimg.com/736x/96/99/98/969998ab8378405914afda9d34323a69.jpg" alt="JavaScript">
+                        <p class="phone"><strong>Телефон:</strong> 8 771 420 9017</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Советы -->
+    <section id="section">
+        <h1>Кеңестер:</h1>
+        <div class="advice-list" id="advice-list">
+            <!-- Здесь будут динамически добавляться советы -->
+        </div>
+        <div class="pagination">
+            <button id="prev-page" onclick="changePage(-1)">Предыдущая</button>
+            <button id="next-page" onclick="changePage(1)">Следующая</button>
+        </div>
+    </section>
+    <!-- <section id="section">
+        <h1>Кеңестер:</h1>
+        <div class="advice-list">
+
+            <div class="advice-item">
+                <img src="https://via.placeholder.com/60" alt="Аватар">
+                <div class="advice-content">
+                    <h2 class="nickname">Aigerim_Kanatqyzy</h2>
+                    <p class="advice-text">Разбейте проект на этапы и работайте постепенно. Начните с прототипирования и базовой структуры, затем переходите к функционалу и стилю. Это поможет избежать паники и улучшит качество работы, поскольку у вас будет четкий план.</p>
+                </div>
+            </div>
+
+            <div class="advice-item">
+                <img src="https://via.placeholder.com/60" alt="Аватар">
+                <div class="advice-content">
+                    <h2 class="nickname">BlinkVerse</h2>
+                    <p class="advice-text">Focus on user experience (UX) from the start. Plan a simple, clear navigation and consider the needs of your audience, as it will make your project both functional and visually appealing.</p>
+                </div>
+            </div>
+
+            <div class="advice-item">
+                <img src="https://via.placeholder.com/60" alt="Аватар">
+                <div class="advice-content">
+                    <h2 class="nickname">Ruslan_Vladislav</h2>
+                    <p class="advice-text">Жұмысыңның негізін қалыптастырып алған соң, тексеріп көретін уақыт қалдырыңыз. Әрбір бөлімді бітірген соң, қателер мен ақауларды уақытылы түзету маңызды.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Добавить совет -->
+    <section class="signup-section">
+        <div class="signup-info">
+            <h2>КЕҢЕСПЕН БӨЛІСУ</h2>
+            <p>Жинақтаған лайфхактарыңыз бен тиімді шешімдеріңізді бөлісіп, өзгелердің күнделікті өмірін жеңілдетуге, жаңа көзқарастар қалыптастыруға және проблемаларды оңай шешуге көмектесіңіз. Сіздің бөліскен әрбір идеяңыз басқаларға үлкен қолдау мен шабыт бола алады</p>
+        </div>
+        <div class="signup-form">
+            <h2>Кеңес қалдыру</h2>
+            <form id="advice-form">
+                <input type="text" id="nickname" placeholder="ФИО-ңызды енгізіңіз" required>
+                <input type="text" id="advice-text" placeholder="Кеңес" required>
+                <button type="submit">Жіберу</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <footer id="footer"> <!-- class -->
+        <div class="footer-about">
+          <h3>Сайт туралы</h3>
+          <p>© Coursera Inc., 2024 Все права защищены.</p>
+        </div>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">TikTok</a>
+        </div>
+        <div class="footer-contact">
+          <p>Қазақстан, Алматы қ., 8-ші шағын ауданы, 86</p>
+          <p>Тел.: 586 95 25 | 8 778 512 66 45</p>
+          <p>Пошта: bilimkazina02@gmail.com</p>
+        </div>
+    </footer>
+    <script src="course.js"></script>
+</body>
+</html>
